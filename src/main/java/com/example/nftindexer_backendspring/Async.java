@@ -11,6 +11,7 @@ public class Async implements CommandLineRunner {
     private static final Logger logger = LoggerFactory.getLogger(Indexer.class);
     @Override
     public void run(String... args) throws Exception {
-
+        Indexer.indexerLogic indexer = new Indexer.indexerLogic();
+        indexer.indexerLogic();
     }
 }
