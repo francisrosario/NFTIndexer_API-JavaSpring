@@ -1,4 +1,4 @@
-package com.example.nftindexer_backendspring.service;
+package com.example.nftindexer_backendspring.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
