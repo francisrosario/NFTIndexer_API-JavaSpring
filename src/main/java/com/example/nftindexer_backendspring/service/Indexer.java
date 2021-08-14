@@ -141,7 +141,7 @@ public class Indexer {
                         boolean haveValue = false;
                         int retries = 60;
                         do {
-                            logger.info("Waiting for domain value to appear in account..." + " Retries remaning: " + retries);
+                            logger.info("Waiting for domain value to appear in account..." + " Retries remaining: " + retries);
                             accountInfo = lg.getAccountResult(AccountAddress, initialMarker);
                             if(accountInfo.domain().isPresent()) {
                                 haveValue = true;
@@ -163,7 +163,7 @@ public class Indexer {
                                                 logger.info("Image content type found...");
                                                 ipfsImage = ("https://gateway.ipfs.io/ipfs/"+parts[x].subSequence(5, parts[x].length()).toString());
                                                 String PK = String.valueOf(dal.insertLedger(String.valueOf(initialMarker)));
-                                                logger.info("DB Inserted PK: "+ PK);
+                                                logger.info("Database Inserted primary key is : "+ PK);
                                                 //Insert compiled data to database
                                                 dal.insertNFTData(PK, AccountAddress, ipfsImage);
                                             }
